@@ -70,7 +70,7 @@ public class devuwsImpl implements devuwsci{
                  myMethod = cl.getMethod( method_name, new Class[] { String.class, String.class, String.class, Properties.class } );
                  returnValue = "<rmsg><rcode>0</rcode><msg>" +
                                 (String) myMethod.invoke( whatInstance, new Object[] { uid.trim(), fid.trim(), userdata, p } ) + 
-                               "</msg>";
+                               "</msg></rmsg>";
                } else {
                    returnValue = "<rmsg><rcode>9</rcode><msg>Request function cannot be performed</msg></rmsg>";
                    System.out.println("devuws.devuwsImpl.calldevuws() -- No UER Given By the Login Module -- " + pv + " for function id -- " + fid );
